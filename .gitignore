@@ -1,0 +1,16 @@
+# Go binary files
+/bin/
+/pkg/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# macOS system files
+.DS_Store
+
+# Dependencies
+/vendor/
+
+# Test and debug output
+*.out
