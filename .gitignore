@@ -13,3 +13,5 @@
 
 # Test and debug output
 *.out
+
+.env
