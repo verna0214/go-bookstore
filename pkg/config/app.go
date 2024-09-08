@@ -14,14 +14,14 @@ var (
 
 func Connect() {
 	// import .env file
-	err := godotenv.Load()
+	err := godotenv.Load("../../.env")
 	if err != nil {
 		panic("Error loading .env file")
 	}
 	username := os.Getenv("MYSQL_USERNAME")
 	password := os.Getenv("MYSQL_PASSWORD")
 
-	dsn := fmt.Sprintf("%s:%s@tcp(localhost:3306)/simplerest?charset=utf8&parseTime=True&loc=Local", username, password)
+	dsn := fmt.Sprintf("%s:%s@tcp(localhost:3306)/GoBookstore?charset=utf8&parseTime=True&loc=Local", username, password)
 	d, err := gorm.Open("mysql", dsn)
 	if err != nil {
 		panic(err)
