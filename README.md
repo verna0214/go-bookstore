@@ -33,4 +33,21 @@ Go Bookstore is a simple side project in Go that demonstrates how to connect to 
   ```
 
 ## Configuration
-Create a .env file in the root directory with your MySQL database connection details:
+Create a .env file in the root directory with your MySQL database connection details. Refer to the .env.example file for the required format:
+  ``` go
+  MYSQL_USERNAME=
+  MYSQL_PASSWORD=
+  ```
+
+## Running
+Run the main program. The application will run on localhost:9010.
+  ``` go
+  go run main.go
+  ```
+
+## Routes
+- GET /books - Retrieve all books
+- GET /books/{id} - Retrieve a specific book
+- POST /books - Create a new book
+- PUT /books/{id} - Update book information
+- DELETE /books/{id} - Delete a book
